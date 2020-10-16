@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="'/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>deskripsi barang</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-row>
+  <ion-col><ion-img [src]="loaded.foto"></ion-img></ion-col>
+</ion-row>
+  <ion-row>
+  <ion-col>
+    <h1>{{loaded.title}}</h1>
+  </ion-col>
+  </ion-row>
+
+  Merek: {{loaded.merek}}
+  <br> Harga: Rp.{{loaded.harga}}
+  <br> Model:{{loaded.model}}
+  <br> Stok: {{loaded.stok}}
+
+  <ion-item *ngIf="loaded.id.includes('ram')">
+  <br> speed: {{loaded.speed}}
+    <br> ukuran: {{loaded.ukuran}}
+  </ion-item>
+  <ion-item *ngIf="loaded.id.includes('mot')">
+    <br> chipset: {{loaded.chipset}}
+    <br> untuk merek: {{loaded.untukmerekapa}}
+</ion-item>
+<ion-item *ngIf="loaded.id.includes('proc')">
+  <br> base clock: {{loaded.baseclock}}
+  <br> boost clock: {{loaded.boostclock}}
+  <br> jumlah core : {{loaded.core}}
+  <br> jumlah thread: {{loaded.thread}}
+
+</ion-item>
+</ion-content>

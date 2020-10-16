@@ -1,0 +1,31 @@
+<ion-app>
+  <ion-menu menuId="main-menu" content-id="main">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title> menu </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>
+
+          <ion-icon name="person" slot="start"></ion-icon>
+          <ion-label (click)="bukahome()">Home</ion-label>
+
+        </ion-item>
+        <ion-item>
+
+          <ion-icon name="person" slot="start"></ion-icon>
+          <ion-label (click)="bukaaku()">aku</ion-label>
+
+        </ion-item>
+        <ion-item>
+          <ion-icon name="people" slot="start"></ion-icon>
+          <ion-label (click)="bukaadmin()">admin</ion-label>
+        </ion-item>
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

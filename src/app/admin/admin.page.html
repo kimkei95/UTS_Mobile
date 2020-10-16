@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>admin</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let home of ram" [routerLink]="['./', home.id]">
+      <ion-avatar slot="start">
+        <ion-img [src]="home.foto" ></ion-img>
+      </ion-avatar>
+      <ion-label>
+        {{home.merek}}
+      </ion-label>
+    </ion-item>
+    <ion-item *ngFor="let home of motherboard " [routerLink]="['./', home.id]">
+      <ion-avatar slot="start">
+        <ion-img [src]="home.foto" ></ion-img>
+      </ion-avatar>
+      <ion-label>
+        {{home.merek}}
+      </ion-label>
+    </ion-item>
+    <ion-item *ngFor="let home of gpu" [routerLink]="['./', home.id]">
+      <ion-avatar slot = "start">
+        <ion-img [src]="home.foto"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        {{home.merek}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
